@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url(./images/bg-intro-mobile.png);
+  background-color: hsl(0, 100%, 74%);
+}
+
+.title {
+  color: white;
+  /* margin: 0 auto; */
+  text-align: center;
+}
+
+p {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.free-trial-statement {
+  background-color: hsl(248, 32%, 49%);
+  text-align: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+form {
+  background-color: white;
+}
+
+.free-trial-button {
+  background-color: hsl(154, 59%, 51%);
+  border: solid hsl(154, 59%, 51%);
+  color: white;
+  font-family: "Poppins";
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+
+.terms-and-services {
+  color: hsl(0, 100%, 74%);
+}
