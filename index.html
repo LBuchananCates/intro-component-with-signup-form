@@ -34,11 +34,14 @@
         </div>
 
         <form action="" class="signup-form">
-          <input type="text" name="first-name" placeholder="First Name" />
-          <br />
-          <input type="text" name="" placeholder="Last Name" /> <br />
-          <input type="email" name="" placeholder="Email Address" /> <br />
-          <input type="password" name="" placeholder="Password" /> <br />
+          <input type="text" required="required" placeholder="First Name" />
+          <small class="error">First name cannot be empty</small> <br />
+          <input type="text" required="required" placeholder="Last Name" />
+          <small class="error">Last name cannot be empty</small><br />
+          <input type="email" required="required" placeholder="Email Address" />
+          <small class="error">Looks like this is not an email</small><br />
+          <input type="password" required="required" placeholder="Password" />
+          <small class="error">Password cannot be empty</small><br />
 
           <button class="claim-free-trial-btn">Claim your free trial</button>
 
