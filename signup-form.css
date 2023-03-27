@@ -63,10 +63,9 @@ input::placeholder {
 }
 
 .error-icon {
-  border: solid 1px red;
   background-image: url(./images/icon-error.svg);
   background-repeat: no-repeat;
-  background-position-x: right;
+  background-position-x: 95%;
   background-position-y: center;
 }
 
