@@ -62,32 +62,24 @@ input::placeholder {
   font-weight: bold;
 }
 
-/* VALID PSEUDO CLASS */
-input:valid {
-  border: solid 1px hsl(246, 25%, 77%);
-}
-
-/* 
-.invalid {
+.error-icon {
   border: solid 1px red;
   background-image: url(./images/icon-error.svg);
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: center;
-} */
-
-/* error class */
-.error-border {
-  visibility: hidden;
-  border: solid 1px red;
 }
 
 .error-message {
-  /* display: show only when inputs invalid */
   visibility: hidden;
   color: red;
   text-align: right;
   font-style: italic;
+}
+
+/* error class for javascript*/
+.error-border {
+  border: solid 1px red;
 }
 
 .claim-free-trial-btn {
