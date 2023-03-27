@@ -4,70 +4,74 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 
 const freeTrialBtn = document.querySelector(".claim-free-trial-btn");
+const firstNameErrorMessage = document.getElementById("first-name-error-msg");
+const lastNameErrorMessage = document.getElementById("last-name-error-msg");
+const emailErrorMessage = document.getElementById("email-error-msg");
+const passwordErrorMessage = document.getElementById("password-error-msg");
 
 function showErrorBorder(submitCardInfo) {
   if (firstName.value === "" || firstName.value == null) {
     // turns border red
     firstName.classList.add("error-border");
     // display error message
-    const firstNameErrorMessage = document.getElementById(
-      "first-name-error-msg"
-    );
     firstNameErrorMessage.style.visibility = "visible";
     // displays error icon
+    firstName.classList.add("error-icon");
   }
 
   if (lastName.value === "" || lastName.value == null) {
     // turns border red
     lastName.classList.add("error-border");
     // display error message
-    const lastNameErrorMessage = document.getElementById("last-name-error-msg");
     lastNameErrorMessage.style.visibility = "visible";
     // displays error icon
+    lastName.classList.add("error-icon");
   }
 
   if (email.value === "" || email.value == null) {
     // turns border red
     email.classList.add("error-border");
     // display error message
-    const emailErrorMessage = document.getElementById("email-error-msg");
     emailErrorMessage.style.visibility = "visible";
     // displays error icon
+    email.classList.add("error-icon");
   }
 
   if (password.value === "" || password.value == null) {
     // turns border red
     password.classList.add("error-border");
     // display error message
-    const passwordErrorMessage = document.getElementById("password-error-msg");
     passwordErrorMessage.style.visibility = "visible";
     // displays error icon
+    password.classList.add("error-icon");
   }
   // when clicking submit with errors, doesn't refresh page, displays errors
   submitCardInfo.preventDefault();
 }
+
 freeTrialBtn.addEventListener("click", showErrorBorder);
 
-// upon typing, remove error class
-firstName.oninput = () => {
-  firstName.innerText = firstName.value;
-  firstName.classList.remove("error");
-};
+// event listeners below remove error border, error-icon, error message
+firstName.addEventListener("focus", function () {
+  firstName.classList.remove("error-border");
+  firstNameErrorMessage.style.visibility = "hidden";
+  firstName.classList.remove("error-icon");
+});
 
-// upon typing, remove error class
-lastName.oninput = () => {
-  lastName.innerText = lastName.value;
-  lastName.classList.remove("error");
-};
+lastName.addEventListener("focus", function () {
+  lastName.classList.remove("error-border");
+  lastNameErrorMessage.style.visibility = "hidden";
+  lastName.classList.remove("error-icon");
+});
 
-// upon typing, remove error class
-email.oninput = () => {
-  email.innerText = email.value;
-  email.classList.remove("error");
-};
+email.addEventListener("focus", function () {
+  email.classList.remove("error-border");
+  emailErrorMessage.style.visibility = "hidden";
+  email.classList.remove("error-icon");
+});
 
-// upon typing, remove error class
-password.oninput = () => {
-  password.innerText = password.value;
-  password.classList.remove("error");
-};
+password.addEventListener("focus", function () {
+  password.classList.remove("error-border");
+  passwordErrorMessage.style.visibility = "hidden";
+  password.classList.remove("error-icon");
+});
