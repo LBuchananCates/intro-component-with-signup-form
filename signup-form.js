@@ -13,19 +13,19 @@ function showErrorBorder(submitCardInfo) {
   if (firstName.value === "" || firstName.value == null) {
     // turns border red
     firstName.classList.add("error-border");
-    // display error message
-    firstNameErrorMessage.style.visibility = "visible";
     // displays error icon
     firstName.classList.add("error-icon");
+    // display error message
+    firstNameErrorMessage.style.visibility = "visible";
   }
 
   if (lastName.value === "" || lastName.value == null) {
     // turns border red
     lastName.classList.add("error-border");
-    // display error message
-    lastNameErrorMessage.style.visibility = "visible";
     // displays error icon
     lastName.classList.add("error-icon");
+    // display error message
+    lastNameErrorMessage.style.visibility = "visible";
   }
 
   if (email.value === "" || email.value == null) {
@@ -45,8 +45,22 @@ function showErrorBorder(submitCardInfo) {
     // displays error icon
     password.classList.add("error-icon");
   }
+
   // when clicking submit with errors, doesn't refresh page, displays errors
   submitCardInfo.preventDefault();
+}
+
+let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+function validation() {
+  if (email.value.match(pattern)) {
+    email.classList.add("valid");
+    email.classList.remove("invalid");
+    emailErrorMessage.style.visibility = "hidden";
+  } else {
+    email.classList.remove("valid");
+    email.classList.add("invalid");
+    emailErrorMessage.style.visibility = "visible";
+  }
 }
 
 freeTrialBtn.addEventListener("click", showErrorBorder);

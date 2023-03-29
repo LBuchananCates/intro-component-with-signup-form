@@ -81,6 +81,10 @@ input::placeholder {
   border: solid 1px red;
 }
 
+.invalid {
+  border: solid 1px red;
+}
+
 .claim-free-trial-btn {
   background-color: hsl(154, 59%, 51%);
   border: solid hsl(154, 59%, 51%);
